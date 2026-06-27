@@ -68,13 +68,13 @@ let moveRight = false;
 function preload() {
 
 
-this.load.image('room1', 'assets/room1.png');
-this.load.image('room2', 'assets/room2.png');
-this.load.image('room3', 'assets/room3.png');
-this.load.image('finalroom', 'assets/finalroom.png');
-this.load.image('player', 'assets/player.png');
-this.load.image('petal', 'assets/petal.png');
-this.load.audio('bgmusic', 'assets/music.mp3');
+this.load.image('room1', 'room1.png');
+this.load.image('room2', 'room2.png');
+this.load.image('room3', 'room3.png');
+this.load.image('finalroom', 'finalroom.png');
+this.load.image('player', 'player.png');
+this.load.image('petal', 'petal.png');
+this.load.audio('bgmusic', 'music.mp3');
 
 
 }
