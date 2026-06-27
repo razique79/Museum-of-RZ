@@ -231,7 +231,7 @@ tapHint.setVisible(false);
        // loop: true
    // });
 
-    music.play();
+   
 //}
 messageText.setOrigin(0.5);
 messageText.setVisible(false);
@@ -258,32 +258,44 @@ for (let i = 0; i < 30; i++) {
 // MOBILE CONTROLS
 
 leftBtn = this.add.text(
-    50,
-    this.sys.game.config.height - 100,
-    "⬅️",
-    { font: "50px Arial" }
-).setInteractive();
+    40,
+    this.sys.game.config.height - 120,
+    "◀",
+    {
+        font: "60px Arial",
+        backgroundColor: "#000000"
+    }
+).setInteractive().setScrollFactor(0).setDepth(9999);
 
 rightBtn = this.add.text(
     170,
-    this.sys.game.config.height - 100,
-    "➡️",
-    { font: "50px Arial" }
-).setInteractive();
+    this.sys.game.config.height - 120,
+    "▶",
+    {
+        font: "60px Arial",
+        backgroundColor: "#000000"
+    }
+).setInteractive().setScrollFactor(0).setDepth(9999);
 
 upBtn = this.add.text(
-    110,
-    this.sys.game.config.height - 170,
-    "⬆️",
-    { font: "50px Arial" }
-).setInteractive();
+    105,
+    this.sys.game.config.height - 200,
+    "▲",
+    {
+        font: "60px Arial",
+        backgroundColor: "#000000"
+    }
+).setInteractive().setScrollFactor(0).setDepth(9999);
 
 downBtn = this.add.text(
-    110,
+    105,
     this.sys.game.config.height - 40,
-    "⬇️",
-    { font: "50px Arial" }
-).setInteractive();
+    "▼",
+    {
+        font: "60px Arial",
+        backgroundColor: "#000000"
+    }
+).setInteractive().setScrollFactor(0).setDepth(9999);
 
 leftBtn.on('pointerdown', () => moveLeft = true);
 leftBtn.on('pointerup', () => moveLeft = false);
@@ -296,7 +308,6 @@ upBtn.on('pointerup', () => moveUp = false);
 
 downBtn.on('pointerdown', () => moveDown = true);
 downBtn.on('pointerup', () => moveDown = false);
-t
 }
 
 
