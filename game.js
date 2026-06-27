@@ -308,6 +308,57 @@ upBtn.on('pointerup', () => moveUp = false);
 
 downBtn.on('pointerdown', () => moveDown = true);
 downBtn.on('pointerup', () => moveDown = false);
+leftBtn = this.add.text(
+    40,
+    this.sys.game.config.height - 120,
+    "◀",
+    {
+        font: "60px Arial",
+        backgroundColor: "#000000"
+    }
+).setInteractive().setScrollFactor(0).setDepth(9999);
+
+rightBtn = this.add.text(
+    170,
+    this.sys.game.config.height - 120,
+    "▶",
+    {
+        font: "60px Arial",
+        backgroundColor: "#000000"
+    }
+).setInteractive().setScrollFactor(0).setDepth(9999);
+
+upBtn = this.add.text(
+    105,
+    this.sys.game.config.height - 200,
+    "▲",
+    {
+        font: "60px Arial",
+        backgroundColor: "#000000"
+    }
+).setInteractive().setScrollFactor(0).setDepth(9999);
+
+downBtn = this.add.text(
+    105,
+    this.sys.game.config.height - 40,
+    "▼",
+    {
+        font: "60px Arial",
+        backgroundColor: "#000000"
+    }
+).setInteractive().setScrollFactor(0).setDepth(9999);
+
+leftBtn.on('pointerdown', () => moveLeft = true);
+leftBtn.on('pointerup', () => moveLeft = false);
+
+rightBtn.on('pointerdown', () => moveRight = true);
+rightBtn.on('pointerup', () => moveRight = false);
+
+upBtn.on('pointerdown', () => moveUp = true);
+upBtn.on('pointerup', () => moveUp = false);
+
+downBtn.on('pointerdown', () => moveDown = true);
+downBtn.on('pointerup', () => moveDown = false);
 }
 
 
@@ -368,6 +419,7 @@ you became someone very special ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        tapHint.setVisible(true);
         canCloseMessage = false;
 
 this.time.delayedCall(1000, () => {
@@ -411,6 +463,7 @@ could brighten an entire day ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        tapHint.setVisible(true);
         canCloseMessage = false;
 
 this.time.delayedCall(1000, () => {
@@ -463,6 +516,7 @@ that is hard to describe ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        tapHint.setVisible(true);
         canCloseMessage = false;
 
 this.time.delayedCall(1000, () => {
@@ -513,6 +567,7 @@ And for me that flower will always be YOU ZARUUUU ❤️🌸`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        tapHint.setVisible(true);
         canCloseMessage = false;
 
 this.time.delayedCall(1000, () => {
@@ -563,6 +618,7 @@ simply because they happened with YOU ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        tapHint.setVisible(true);
         canCloseMessage = false;
 
 this.time.delayedCall(1000, () => {
@@ -618,6 +674,7 @@ such an important part of my story ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        tapHint.setVisible(true);
         canCloseMessage = false;
 
 this.time.delayedCall(1000, () => {
@@ -688,6 +745,7 @@ will always belong to YOU❤️
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        tapHint.setVisible(true);
         canCloseMessage = false;
 
 this.time.delayedCall(1000, () => {
