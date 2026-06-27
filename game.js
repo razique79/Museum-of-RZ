@@ -296,24 +296,10 @@ upBtn.on('pointerup', () => moveUp = false);
 
 downBtn.on('pointerdown', () => moveDown = true);
 downBtn.on('pointerup', () => moveDown = false);
-this.input.on('pointerup', () => {
-
-    if (messageBox.visible) {
-
-        messageBox.setVisible(false);
-        messageText.setVisible(false);
-
-    }
-});
+t
 }
-this.input.on('pointerup', () => {
 
-    if (messageBox.visible && canCloseMessage) {
 
-        messageBox.setVisible(false);
-        messageText.setVisible(false);
-    }
-});
 
 function update() {
 player.setVelocity(0);
