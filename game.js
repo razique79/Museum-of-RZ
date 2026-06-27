@@ -1,3 +1,4 @@
+let canCloseMessage = false;
 let tapHint;
 let interactionHint;
 let music;
@@ -74,7 +75,7 @@ this.load.image('room3', 'room3.png');
 this.load.image('finalroom', 'finalroom.png');
 this.load.image('player', 'player.png');
 this.load.image('petal', 'petal.png');
-this.load.audio('bgmusic', 'music.mp3');
+//this.load.audio('bgmusic', 'music.mp3');
 
 
 }
@@ -223,15 +224,15 @@ tapHint.setVisible(false);
         wordWrap: { width: 700 }
     }
 
-if (this.cache.audio.exists('bgmusic')) {
+//if (this.cache.audio.exists('bgmusic')) {
 
-    music = this.sound.add('bgmusic', {
-        volume: 0.25,
-        loop: true
-    });
+    //music = this.sound.add('bgmusic', {
+       // volume: 0.25,
+       // loop: true
+   // });
 
     music.play();
-}
+//}
 messageText.setOrigin(0.5);
 messageText.setVisible(false);
 
@@ -305,6 +306,14 @@ this.input.on('pointerup', () => {
     }
 });
 }
+this.input.on('pointerup', () => {
+
+    if (messageBox.visible && canCloseMessage) {
+
+        messageBox.setVisible(false);
+        messageText.setVisible(false);
+    }
+});
 
 function update() {
 player.setVelocity(0);
@@ -362,6 +371,12 @@ you became someone very special ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        canCloseMessage = false;
+
+this.time.delayedCall(1000, () => {
+    canCloseMessage = true;
+});
+
         
     }
 }
@@ -399,6 +414,11 @@ could brighten an entire day ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        canCloseMessage = false;
+
+this.time.delayedCall(1000, () => {
+    canCloseMessage = true;
+});
          
     }
 }
@@ -446,6 +466,11 @@ that is hard to describe ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        canCloseMessage = false;
+
+this.time.delayedCall(1000, () => {
+    canCloseMessage = true;
+});
          
     }
 }
@@ -491,6 +516,11 @@ And for me that flower will always be YOU ZARUUUU ❤️🌸`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        canCloseMessage = false;
+
+this.time.delayedCall(1000, () => {
+    canCloseMessage = true;
+});
        
         
     }
@@ -536,6 +566,11 @@ simply because they happened with YOU ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        canCloseMessage = false;
+
+this.time.delayedCall(1000, () => {
+    canCloseMessage = true;
+});
         
     }
 }
@@ -586,6 +621,11 @@ such an important part of my story ❤️`
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        canCloseMessage = false;
+
+this.time.delayedCall(1000, () => {
+    canCloseMessage = true;
+});
          
         room3Orb3Collected = true;
 
@@ -651,6 +691,11 @@ will always belong to YOU❤️
 
         messageBox.setVisible(true);
         messageText.setVisible(true);
+        canCloseMessage = false;
+
+this.time.delayedCall(1000, () => {
+    canCloseMessage = true;
+});
         
 
         interactionHint.setText(
